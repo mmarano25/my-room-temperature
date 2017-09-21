@@ -1,0 +1,7 @@
+#!/bin/bash
+
+OUTPUT=$(rsync -vazh -e "ssh -p 8888 -i /home/matt/.ssh/id_rsa" pi@matts.pi.info.tm:/home/pi/temperature_sensor/temperature.log /home/matt/pi_data)
+
+LOG=`date`'\n'$OUTPUT
+
+echo -e $LOG | cat >> /tmp/pi_temp_data.log
