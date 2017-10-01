@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 import plotly as plt
 import plotly.graph_objs as go
 
